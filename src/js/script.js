@@ -75,3 +75,40 @@ function fallbackCopy(texto) {
     }
     document.body.removeChild(textArea);
 }
+
+// 5. REGISTRAR SERVICE WORKER PARA PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                console.log('✅ Service Worker registrado com sucesso:', registration.scope);
+            })
+            .catch(function(error) {
+                console.error('❌ Erro ao registrar Service Worker:', error);
+            });
+    });
+}
+
+// 6. VERIFICAR SE O APP ESTÁ SENDO EXECUTADO NO MODO STANDALONE (PWA)
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+    console.log('✅ Aplicação executando como PWA instalado');
+    document.body.classList.add('pwa-installed');
+}
+
+// 7. DETECTAR ATUALIZAÇÕES DO SERVICE WORKER
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(function(registration) {
+        registration.addEventListener('updatefound', function() {
+            const newWorker = registration.installing;
+            newWorker.addEventListener('statechange', function() {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    console.log('🔄 Nova versão do site disponível! Recarregue a página.');
+                    // Opcional: mostrar notificação para o usuário
+                    if (confirm('Uma nova versão do site está disponível. Deseja atualizar agora?')) {
+                        window.location.reload();
+                    }
+                }
+            });
+        });
+    });
+}
