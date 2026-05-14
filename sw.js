@@ -3,8 +3,8 @@ const CACHE_NAME = 'vanocode-v2';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/css/style.css',
-  '/js/script.js',
+  '/src/css/style.css',
+  '/src/js/script.js',
   '/src/images/icon_logo_512x512.png',
   '/src/images/icon_logo_192x192.png'
 ];
@@ -99,4 +99,34 @@ self.addEventListener('push', event => {
       badge: '/src/images/icon_logo_192x192.png'
     })
   );
+});
+
+// Notificação de boas-vindas via Service Worker
+self.addEventListener('message', event => {
+    if (event.data && event.data.type === 'show-welcome') {
+        self.registration.showNotification('Bem-vindo à Vanocode! 🚀', {
+            body: 'Obrigado por instalar nosso app. Explore todos os serviços e soluções digitais.',
+            icon: '/src/images/icon_logo_192x192.png',
+            badge: '/src/images/icon_logo_192x192.png',
+            tag: 'welcome-vanocode',
+            requireInteraction: true,
+            silent: false,
+            actions: [
+                {
+                    action: 'open',
+                    title: 'Abrir Site'
+                }
+            ]
+        });
+    }
+});
+
+// Lidar com cliques em notificações
+self.addEventListener('notificationclick', event => {
+    event.notification.close();
+    if (event.action === 'open') {
+        clients.openWindow('/');
+    } else {
+        clients.openWindow('/');
+    }
 });
