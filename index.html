@@ -708,6 +708,59 @@
         navigator.clipboard.writeText(contactos).then(() => alert('Contactos copiados!')).catch(() => prompt('Copie manualmente:', contactos));
       }
     }
+
+    // Contact Form - Versão melhorada para Netlify
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const loading = form.querySelector('.loading');
+        const errorDiv = form.querySelector('.error-message');
+        const sentDiv = form.querySelector('.sent-message');
+
+        // Mostrar loading, esconder outras mensagens
+        loading.classList.remove('d-none');
+        errorDiv.classList.add('d-none');
+        sentDiv.classList.add('d-none');
+
+        // Preparar dados do formulário
+        const formData = new FormData(form);
+
+        try {
+          // Enviar para o Netlify
+          const response = await fetch('/', {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            // Sucesso
+            loading.classList.add('d-none');
+            sentDiv.classList.remove('d-none');
+            form.reset();
+
+            // Esconder mensagem de sucesso após 5 segundos
+            setTimeout(() => {
+              sentDiv.classList.add('d-none');
+            }, 5000);
+          } else {
+            // Erro na resposta
+            throw new Error('Erro ao enviar mensagem. Tente novamente.');
+          }
+        } catch (error) {
+          // Erro na requisição
+          loading.classList.add('d-none');
+          errorDiv.textContent = error.message || 'Erro ao enviar mensagem. Tente novamente mais tarde.';
+          errorDiv.classList.remove('d-none');
+
+          // Esconder mensagem de erro após 5 segundos
+          setTimeout(() => {
+            errorDiv.classList.add('d-none');
+          }, 5000);
+        }
+      });
+    }
   </script>
 </body>
 
