@@ -537,7 +537,7 @@
           <div class="col-lg-7">
             <!-- Formulário configurado para Netlify -->
             <form name="contact" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true"
-              class="php-email-form" data-aos="fade-up" data-aos-delay="200" id="contactForm">
+              class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <!-- Campo oculto necessário para o Netlify -->
               <input type="hidden" name="form-name" value="contact">
 
@@ -644,6 +644,7 @@
 
   <!-- Custom Scripts -->
   <script>
+    // Custom Scripts - Versão Limpa e Funcional
     document.addEventListener('DOMContentLoaded', () => {
       // Swiper clients
       const swiperEls = document.querySelectorAll('.init-swiper');
@@ -681,85 +682,16 @@
           document.getElementById('preloader')?.classList.add('hidden');
         }
       });
-
-      // Contact Form
-      const form = document.getElementById('contactForm');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const loading = form.querySelector('.loading');
-          const sentDiv = form.querySelector('.sent-message');
-          loading.classList.remove('d-none');
-          setTimeout(() => {
-            loading.classList.add('d-none');
-            sentDiv.classList.remove('d-none');
-            form.reset();
-            setTimeout(() => sentDiv.classList.add('d-none'), 4000);
-          }, 1000);
-        });
-      }
     });
 
+    // Função para compartilhar contactos
     function compartilharContactos() {
-      const contactos = '📞 Pedro Vanova - Vanocode\nWhatsApp: +244 976 510 057\nEmail: pedro@vanocode.com\nInstagram: @pedrovanova\nGitHub: pedrovanova\nCatálogo WhatsApp: https://wa.me/c/244976510057';
+      const contactos = '📞 Pedro Vanova - Vanocode\nWhatsApp: +244 976 510 057\nEmail: vanocoding@gmail.com\nInstagram: @pedrovanova\nGitHub: pedrovanova\nCatálogo WhatsApp: https://wa.me/c/244976510057';
       if (navigator.share) {
         navigator.share({ title: 'Contacto Pedro Vanova - Vanocode', text: contactos }).catch(() => { });
       } else {
         navigator.clipboard.writeText(contactos).then(() => alert('Contactos copiados!')).catch(() => prompt('Copie manualmente:', contactos));
       }
-    }
-
-    // Contact Form - Versão melhorada para Netlify
-    const form = document.getElementById('contactForm');
-    if (form) {
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        const loading = form.querySelector('.loading');
-        const errorDiv = form.querySelector('.error-message');
-        const sentDiv = form.querySelector('.sent-message');
-
-        // Mostrar loading, esconder outras mensagens
-        loading.classList.remove('d-none');
-        errorDiv.classList.add('d-none');
-        sentDiv.classList.add('d-none');
-
-        // Preparar dados do formulário
-        const formData = new FormData(form);
-
-        try {
-          // Enviar para o Netlify
-          const response = await fetch('/', {
-            method: 'POST',
-            body: formData
-          });
-
-          if (response.ok) {
-            // Sucesso
-            loading.classList.add('d-none');
-            sentDiv.classList.remove('d-none');
-            form.reset();
-
-            // Esconder mensagem de sucesso após 5 segundos
-            setTimeout(() => {
-              sentDiv.classList.add('d-none');
-            }, 5000);
-          } else {
-            // Erro na resposta
-            throw new Error('Erro ao enviar mensagem. Tente novamente.');
-          }
-        } catch (error) {
-          // Erro na requisição
-          loading.classList.add('d-none');
-          errorDiv.textContent = error.message || 'Erro ao enviar mensagem. Tente novamente mais tarde.';
-          errorDiv.classList.remove('d-none');
-
-          // Esconder mensagem de erro após 5 segundos
-          setTimeout(() => {
-            errorDiv.classList.add('d-none');
-          }, 5000);
-        }
-      });
     }
   </script>
 </body>
