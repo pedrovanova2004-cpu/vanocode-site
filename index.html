@@ -2,237 +2,695 @@
 <html lang="pt-PT">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanocode | Soluções Digitais Premium - Web, Apps & Marketing</title>
-    <meta name="description"
-        content="Vanocode é a plataforma definitiva de soluções digitais. Especialistas em criação de websites, aplicativos móveis, marketing digital e automação.">
-    <meta name="keywords"
-        content="Vanocode, Pedro Vanova, desenvolvimento web, criação de apps, soluções digitais Angola, programador, site responsivo, marketing digital">
-    <meta name="author" content="Pedro Vanova - Vanocode">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanocode | Soluções Digitais Premium - Web, Apps & Marketing</title>
+  <meta name="description"
+    content="Vanocode é a plataforma definitiva de soluções digitais. Especialistas em criação de websites, aplicativos móveis, marketing digital e automação.">
+  <meta name="keywords"
+    content="Vanocode, Pedro Vanova, desenvolvimento web, criação de apps, soluções digitais Angola, programador, site responsivo, marketing digital">
+  <meta name="author" content="Pedro Vanova - Vanocode">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Vanocode - Soluções Digitais Premium">
-    <meta property="og:description"
-        content="Criação de Websites, Aplicações, Marketing Digital e Automação para o seu negócio.">
-    <meta property="og:image" content="src/images/icon_logo_512x512.png">
-    <meta property="og:url" content="https://vanocode.com">
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vanocode - Soluções Digitais Premium">
+  <meta property="og:description"
+    content="Criação de Websites, Aplicações, Marketing Digital e Automação para o seu negócio.">
+  <meta property="og:image" content="assets/img/icon_logo_512x512.png">
+  <meta property="og:url" content="https://vanocode.com">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon.png">
-    <link rel="apple-touch-icon" href="src/images/app-touch-icon.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/app-touch-icon.png">
 
-    <!-- Fontes e Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fonts - Arsha Style -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="src/css/style.css">
+  <!-- Vendor CSS Files (Arsha Structure) -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- PWA Meta Tags -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Vanocode">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#0A66C2">
-    <meta name="msapplication-TileColor" content="#0A192F">
-    <meta name="msapplication-TileImage" content="src/images/icon_logo_192x192.png">
-    <meta name="msapplication-config" content="browserconfig.xml">
+  <!-- Font Awesome (icons extras) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS File (Arsha Base + Custom Overrides) -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- PWA Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Vanocode">
+  <meta name="theme-color" content="#0A66C2">
 </head>
 
-<body>
+<body class="index-page">
 
-    <!-- PRELOADER PROFISSIONAL -->
-    <div id="preloader">
-        <div class="loader-container">
-            <div class="loader-logo">
-                <img src="src/images/icon_logo_512x512.png" alt="Vanocode Logo" class="loader-logo-img">
-            </div>
-            <div class="loader-text">VANCODE</div>
-            <div class="loader-bar-container">
-                <div class="loader-bar"></div>
-            </div>
-        </div>
+  <!-- ======= PRELOADER ======= -->
+  <div id="preloader">
+    <div class="text-center">
+      <div class="mb-3">
+        <img src="assets/img/icon_logo_512x512.png" alt="Vanocode Logo" class="loader-logo-img" width="80">
+      </div>
+      <div class="fs-4 fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">VANCODE</div>
+      <div class="loader-bar-container mx-auto" style="height: 4px; width: 200px;">
+        <div class="loader-bar"></div>
+      </div>
     </div>
+  </div>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <img src="src/images/icon_logo_512x512.png" alt="Vanocode" onerror="this.style.display='none'">
-            VANCODE
+  <!-- ======= HEADER ======= (Arsha Style) -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/icon_logo_512x512.png" alt="Vanocode" width="40" class="me-2">
+        <h1 class="sitename">VANCODE</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Projetos</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#skills">Tecnologias</a></li>
+          <li><a href="#contact">Contactos</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="#contact">Fale Conosco</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ======= HERO SECTION (Arsha Style) ======= -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Transforme sua <br><span style="color: #0A66C2;">Ideia em Código</span></h1>
+            <p class="lead">Na <strong>Vanocode</strong>, criamos soluções digitais que elevam o seu negócio. Websites,
+              aplicações e estratégias personalizadas com tecnologia de ponta.</p>
+            <div class="d-flex">
+              <a href="#contact" class="btn-get-started"><i class="fab fa-whatsapp me-2"></i> Fale Conosco</a>
+              <a href="#portfolio" class="glightbox btn-watch-video d-flex align-items-center"><i
+                  class="bi bi-arrow-right"></i><span>Ver Projetos</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="Vanocode Hero">
+          </div>
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-        <nav>
-            <ul id="navMenu">
-                <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
-                <li><a href="#projetos" onclick="closeMenu()">Projetos</a></li>
-                <li><a href="#contactos" onclick="closeMenu()">Contactos</a></li>
+      </div>
+    </section>
+
+    <!-- ======= CLIENTS / TECNOLOGIAS SWIPER ======= -->
+    <section id="clients" class="clients section light-background">
+      <div class="container" data-aos="zoom-in">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            { "loop": true, "speed": 600, "autoplay": { "delay": 3000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "320": { "slidesPerView": 2 }, "480": { "slidesPerView": 3 }, "640": { "slidesPerView": 4 }, "992": { "slidesPerView": 5 }, "1200": { "slidesPerView": 6 } } }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide text-center"><i class="fab fa-html5"></i>
+              <p class="small mt-1">HTML5</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-css3-alt"></i>
+              <p class="small mt-1">CSS3</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-js"></i>
+              <p class="small mt-1">JavaScript</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-react"></i>
+              <p class="small mt-1">React</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-node-js"></i>
+              <p class="small mt-1">Node.js</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-python"></i>
+              <p class="small mt-1">Python</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fas fa-database"></i>
+              <p class="small mt-1">SQL/NoSQL</p>
+            </div>
+            <div class="swiper-slide text-center"><i class="fab fa-figma"></i>
+              <p class="small mt-1">Figma</p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ABOUT SECTION ======= -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sobre <span>Nós</span></h2>
+        <p>Conheça a história e os valores que movem a Vanocode</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead fst-italic">
+              A Vanocode nasceu da paixão por transformar ideias em soluções digitais inovadoras.
+            </p>
+            <p>
+              Fundada por <strong>Pedro Vanova</strong>, desenvolvedor sénior com mais de 8 anos de experiência,
+              a Vanocode tem como missão ajudar empresas e empreendedores a conquistarem o mundo digital através de
+              tecnologia de ponta, design inteligente e estratégias personalizadas.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Mais de 50 projetos entregues com sucesso</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Clientes em 5 países diferentes</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Especialistas em transformação digital</span></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content reveal">
-            <h1>Transforme sua <br><span>Ideia em Código</span></h1>
-            <p>Na <strong>Vanocode</strong>, criamos soluções digitais que elevam o seu negócio. Websites, aplicações e
-                estratégias personalizadas com tecnologia de ponta.</p>
-            <div class="hero-buttons">
-                <a href="#contactos" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
-                <a href="#projetos" class="btn-outline">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="position-relative">
+              <img src="assets/img/about-img.png" class="img-fluid rounded" alt="Sobre Vanocode">
+              <div class="mt-4">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="display-4 text-primary me-3"><i class="bi bi-code-slash"></i></div>
+                  <div>
+                    <h5 class="mb-0">Código de Qualidade</h5>
+                    <p class="mb-0 small">Seguimos as melhores práticas do mercado</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="display-4 text-primary me-3"><i class="bi bi-chat-dots"></i></div>
+                  <div>
+                    <h5 class="mb-0">Suporte Dedicado</h5>
+                    <p class="mb-0 small">Acompanhamento contínuo pós-entrega</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="display-4 text-primary me-3"><i class="bi bi-rocket"></i></div>
+                  <div>
+                    <h5 class="mb-0">Entregas Ágeis</h5>
+                    <p class="mb-0 small">Metodologias ágeis para resultados rápidos</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="section">
-        <div class="section-header reveal">
-            <h2>Nossos <span>Serviços</span></h2>
-            <p>Soluções completas para o seu ecossistema digital</p>
+    <!-- ======= SERVIÇOS SECTION ======= -->
+    <section id="servicos" class="services section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Nossos <span>Serviços</span></h2>
+        <p>Soluções completas para o seu ecossistema digital</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <h4><a class="stretched-link">Criação de Websites</a></h4>
+              <p>Sites institucionais, landing pages de alta conversão, e-commerces e portfólios profissionais.</p>
+              <ul class="list-unstyled mt-3 small">
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Design responsivo</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> SEO otimizado</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Velocidade garantida</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-phone"></i></div>
+              <h4><a class="stretched-link">Aplicações Mobile</a></h4>
+              <p>Apps nativas e híbridas para Android e iOS, sistemas de gestão empresarial sob medida.</p>
+              <ul class="list-unstyled mt-3 small">
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> UI/UX intuitiva</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Integração com APIs</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Publicação nas lojas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <h4><a class="stretched-link">Marketing Digital</a></h4>
+              <p>Estratégias de SEO, gestão de redes sociais, Google Ads e tráfego pago para alavancar sua marca.</p>
+              <ul class="list-unstyled mt-3 small">
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Análise de métricas</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Conteúdo estratégico</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Crescimento orgânico</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-gear"></i></div>
+              <h4><a class="stretched-link">Automação & Sistemas</a></h4>
+              <p>Desenvolvimento de sistemas web personalizados, APIs, automação de processos e integrações.</p>
+              <ul class="list-unstyled mt-3 small">
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Painéis administrativos</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Segurança avançada</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-1"></i> Suporte contínuo</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-globe"></i></div>
-                <h3>Criação de Websites</h3>
-                <p>Desenvolvemos sites institucionais, landing pages de alta conversão, e-commerces e portfólios
-                    profissionais.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Design responsivo</li>
-                    <li><i class="fas fa-check-circle"></i> SEO otimizado</li>
-                    <li><i class="fas fa-check-circle"></i> Velocidade garantida</li>
-                </ul>
-            </div>
-
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Aplicações Mobile</h3>
-                <p>Apps nativas e híbridas para Android e iOS, sistemas de gestão empresarial e soluções sob medida.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> UI/UX intuitiva</li>
-                    <li><i class="fas fa-check-circle"></i> Integração com APIs</li>
-                    <li><i class="fas fa-check-circle"></i> Publicação nas lojas</li>
-                </ul>
-            </div>
-
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Marketing Digital</h3>
-                <p>Estratégias de SEO, gestão de redes sociais, Google Ads e tráfego pago para alavancar sua marca.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Análise de métricas</li>
-                    <li><i class="fas fa-check-circle"></i> Conteúdo estratégico</li>
-                    <li><i class="fas fa-check-circle"></i> Crescimento orgânico</li>
-                </ul>
-            </div>
-
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                <h3>Automação & Sistemas</h3>
-                <p>Desenvolvimento de sistemas web personalizados, APIs, automação de processos e integrações.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Painéis administrativos</li>
-                    <li><i class="fas fa-check-circle"></i> Segurança avançada</li>
-                    <li><i class="fas fa-check-circle"></i> Suporte contínuo</li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section" style="background: #f3f6fa;">
-        <div class="section-header reveal">
-            <h2>Últimos <span>Projetos</span></h2>
-            <p>Exemplos do que já transformamos em realidade</p>
+    <!-- ======= CALL TO ACTION ======= -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+      <img src="assets/img/cta-bg.jpg" alt="" style="opacity:0.15;">
+      <div class="container">
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Pronto para transformar sua ideia em realidade?</h3>
+            <p>Agende uma consultoria gratuita e descubra como podemos impulsionar o seu negócio.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://wa.me/244976510057" target="_blank"><i
+                class="fab fa-whatsapp me-2"></i> Agendar Consultoria</a>
+          </div>
         </div>
-        <div class="projects-grid">
-            <div class="project-card reveal">
-                <div class="project-img" style="background: linear-gradient(135deg, #0A66C2, #4DB8FF);">
-                    <i class="fas fa-laptop-code"></i>
-                    <span class="project-tag">Website</span>
-                </div>
-                <div class="project-info">
-                    <h4>Site Institucional Império</h4>
-                    <p>Landing page moderna com formulário de contacto e integração com WhatsApp.</p>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-img" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span class="project-tag">App</span>
-                </div>
-                <div class="project-info">
-                    <h4>App Finanças Pessoais</h4>
-                    <p>Aplicação mobile para gestão financeira com gráficos e relatórios em tempo real.</p>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-img" style="background: linear-gradient(135deg, #0A192F, #0A66C2);">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="project-tag">E-commerce</span>
-                </div>
-                <div class="project-info">
-                    <h4>Loja Virtual Zona</h4>
-                    <p>Plataforma de vendas online com carrinho, pagamentos e gestão de estoque.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- CONTACTOS -->
-    <section id="contactos" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-header reveal">
-                <h2>Entre em <span style="color: #4DB8FF;">Contacto</span></h2>
-                <p>Pedro Vanova | Fundador & Desenvolvedor Sénior</p>
+    <!-- ======= PORTFOLIO / PROJETOS ======= -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Últimos <span>Projetos</span></h2>
+        <p>Exemplos do que já transformamos em realidade</p>
+      </div>
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-website">Website</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-ecommerce">E-commerce</li>
+          </ul>
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <div class="portfolio-content text-center p-4 bg-white rounded shadow-sm h-100">
+                <div class="mb-3 portfolio-img-bg"
+                  style="background: linear-gradient(135deg, #0A66C2, #4DB8FF); height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                  <i class="fas fa-laptop-code fs-1 text-white"></i>
+                </div>
+                <h4>Site Institucional Império</h4>
+                <p class="small">Landing page moderna com formulário de contacto e integração com WhatsApp.</p>
+                <span class="badge bg-primary">Website</span>
+              </div>
             </div>
-
-            <div class="contact-grid reveal">
-                <div class="contact-item"><i class="fab fa-whatsapp fa-lg"></i> <a href="https://wa.me/244976510057"
-                        target="_blank">+244 976 510 057</a></div>
-                <div class="contact-item"><i class="fas fa-envelope fa-lg"></i> <a
-                        href="mailto:pedro@vanocode.com">pedro@vanocode.com</a></div>
-                <div class="contact-item"><i class="fab fa-instagram fa-lg"></i> <a
-                        href="https://instagram.com/pedrovanova" target="_blank">@pedrovanova</a></div>
-                <div class="contact-item"><i class="fab fa-github fa-lg"></i> <a href="https://github.com/pedrovanova"
-                        target="_blank">pedrovanova</a></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content text-center p-4 bg-white rounded shadow-sm h-100">
+                <div class="mb-3 portfolio-img-bg"
+                  style="background: linear-gradient(135deg, #1a1a2e, #16213e); height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                  <i class="fas fa-mobile-alt fs-1 text-white"></i>
+                </div>
+                <h4>App Finanças Pessoais</h4>
+                <p class="small">Aplicação mobile para gestão financeira com gráficos e relatórios em tempo real.</p>
+                <span class="badge bg-info">App</span>
+              </div>
             </div>
-
-            <div style="text-align: center;" class="reveal">
-                <a href="https://wa.me/c/244976510057" target="_blank" class="catalogo-btn">
-                    <i class="fas fa-store"></i> Ver Catálogo WhatsApp
-                </a>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ecommerce">
+              <div class="portfolio-content text-center p-4 bg-white rounded shadow-sm h-100">
+                <div class="mb-3 portfolio-img-bg"
+                  style="background: linear-gradient(135deg, #0A192F, #0A66C2); height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                  <i class="fas fa-shopping-cart fs-1 text-white"></i>
+                </div>
+                <h4>Loja Virtual Zona</h4>
+                <p class="small">Plataforma de vendas online com carrinho, pagamentos e gestão de estoque.</p>
+                <span class="badge bg-success">E-commerce</span>
+              </div>
             </div>
-
-            <div class="share-container reveal">
-                <p><i class="fas fa-share-alt"></i> Compartilhe todos os meus contactos de uma só vez</p>
-                <button class="btn-share" onclick="compartilharContactos()">
-                    <i class="fas fa-share-nodes"></i> Compartilhar Contacto Completo
-                </button>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="social-links">
-            <a href="https://wa.me/244976510057" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://instagram.com/pedrovanova" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/pedrovanova" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:pedro@vanocode.com"><i class="fas fa-envelope"></i></a>
+    <!-- ======= TESTIMONIALS SECTION ======= -->
+    <section id="testimonials" class="testimonials section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Depoimentos</h2>
+        <p>O que nossos clientes dizem sobre a Vanocode</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2 } } }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>João Silva</h3>
+                <h4>CEO, Grupo Império</h4>
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p><i class="bi bi-quote quote-icon-left"></i><span>A Vanocode transformou nossa presença digital. O
+                    site ficou incrível e as vendas aumentaram 40% em apenas 3 meses.</span><i
+                    class="bi bi-quote quote-icon-right"></i></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Maria Santos</h3>
+                <h4>Fundadora, Moda Zona</h4>
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p><i class="bi bi-quote quote-icon-left"></i><span>Profissionais extremamente competentes. O app que
+                    desenvolveram para nossa loja revolucionou a experiência dos clientes.</span><i
+                    class="bi bi-quote quote-icon-right"></i></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Carlos Mendes</h3>
+                <h4>Diretor de Marketing</h4>
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p><i class="bi bi-quote quote-icon-left"></i><span>Suporte excepcional e entregas no prazo. A equipe da
+                    Vanocode entendeu perfeitamente nossas necessidades.</span><i
+                    class="bi bi-quote quote-icon-right"></i></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Ana Paula</h3>
+                <h4>Empreendedora</h4>
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p><i class="bi bi-quote quote-icon-left"></i><span>Recomendo de olhos fechados! A Vanocode não é apenas
+                    uma prestadora de serviços, é uma parceira de negócios.</span><i
+                    class="bi bi-quote quote-icon-right"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <p>&copy; 2026 Vanocode - Soluções Digitais. Desenvolvido por Pedro Vanova.</p>
-        <p style="margin-top: 0.3rem; font-size: 0.8rem; opacity: 0.7;">Transformando ideias em código, com propósito.
-        </p>
-    </footer>
+      </div>
+    </section>
 
-    <!-- JavaScript Principal -->
-    <script src="src/js/script.js"></script>
-    <!-- PWA Install Script -->
-    <script src="src/js/pwa-install.js"></script>
+    <!-- ======= SKILLS / TECNOLOGIAS ======= -->
+    <section id="skills" class="skills section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center">
+            <img src="assets/img/skills.png" class="img-fluid" alt="Vanocode Skills" style="max-height: 300px;">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3>Tecnologias que dominamos</h3>
+            <p class="fst-italic">Stack moderna para entregar performance e escalabilidade.</p>
+            <div class="skills-content skills-animation">
+              <div class="progress"><span class="skill"><span>HTML5 / CSS3 / JavaScript</span><i
+                    class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="progress"><span class="skill"><span>React / Next.js</span><i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress"><span class="skill"><span>Node.js / Express</span><i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress"><span class="skill"><span>Python / Django</span><i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ======= FAQ ======= -->
+    <section id="faq-2" class="faq-2 section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Perguntas <span>Frequentes</span></h2>
+        <p>Tire suas dúvidas sobre nossos serviços e processos.</p>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="faq-container">
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Quanto tempo leva para desenvolver um site?</h3>
+                <div class="faq-content">
+                  <p>O prazo varia conforme a complexidade. Um site institucional leva de 1 a 3 semanas; um e-commerce,
+                    de 4 a 8 semanas. Trabalhamos com metodologias ágeis para entregar o mais rápido possível sem perder
+                    a qualidade.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Vocês oferecem manutenção após a entrega?</h3>
+                <div class="faq-content">
+                  <p>Sim! Oferecemos planos de manutenção mensal com suporte técnico, atualizações de segurança e
+                    pequenas melhorias. O suporte é contínuo e ágil.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O site será otimizado para SEO e mobile?</h3>
+                <div class="faq-content">
+                  <p>Totalmente. Todos os nossos projetos já nascem com SEO on-page otimizado e design responsivo para
+                    desktop, tablets e smartphones.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Entre em <span>Contacto</span></h2>
+        <p>Pedro Vanova | Fundador & Desenvolvedor Sénior</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-whatsapp flex-shrink-0 text-success"></i>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <p><a href="https://wa.me/244976510057" target="_blank">+244 976 510 057</a></p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-envelope flex-shrink-0 text-primary"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:pedro@vanocode.com">pedro@vanocode.com</a></p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-instagram flex-shrink-0 text-danger"></i>
+                <div>
+                  <h3>Instagram</h3>
+                  <p><a href="https://instagram.com/pedrovanova" target="_blank">@pedrovanova</a></p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="https://github.com/pedrovanova" target="_blank">pedrovanova</a></p>
+                </div>
+              </div>
+              <div class="mt-4"><a href="https://wa.me/c/244976510057" target="_blank"
+                  class="btn btn-outline-primary w-100"><i class="bi bi-shop me-2"></i> Ver Catálogo WhatsApp</a></div>
+              <div class="share-container mt-3 text-center">
+                <p class="small mb-2"><i class="bi bi-share me-1"></i> Compartilhe todos os meus contactos</p>
+                <button class="btn btn-secondary btn-sm" onclick="compartilharContactos()"><i
+                    class="bi bi-share-fill me-1"></i> Compartilhar Contacto Completo</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200"
+              id="contactForm">
+              <div class="row gy-4">
+                <div class="col-md-6"><label class="pb-2">Seu Nome</label><input type="text" name="name"
+                    class="form-control" required></div>
+                <div class="col-md-6"><label class="pb-2">Seu Email</label><input type="email" name="email"
+                    class="form-control" required></div>
+                <div class="col-12"><label class="pb-2">Assunto</label><input type="text" name="subject"
+                    class="form-control" required></div>
+                <div class="col-12"><label class="pb-2">Mensagem</label><textarea class="form-control" name="message"
+                    rows="6" required></textarea></div>
+                <div class="col-12 text-center">
+                  <div class="loading d-none">Enviando...</div>
+                  <div class="error-message d-none text-danger mb-2"></div>
+                  <div class="sent-message d-none text-success mb-2">Mensagem enviada. Obrigado!</div>
+                  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center"><span class="sitename">VANCODE</span></a>
+          <div class="footer-contact pt-3">
+            <p>Transformando ideias em código, com propósito.</p>
+            <p><strong>WhatsApp:</strong> <span>+244 976 510 057</span></p>
+            <p><strong>Email:</strong> <span>pedro@vanocode.com</span></p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Sobre</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#servicos">Serviços</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Projetos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contactos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Serviços</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <span>Websites</span></li>
+            <li><i class="bi bi-chevron-right"></i> <span>Apps Mobile</span></li>
+            <li><i class="bi bi-chevron-right"></i> <span>Marketing Digital</span></li>
+            <li><i class="bi bi-chevron-right"></i> <span>Automação</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Redes Sociais</h4>
+          <p>Siga-nos nas redes sociais e acompanhe nossos projetos.</p>
+          <div class="social-links d-flex">
+            <a href="https://wa.me/244976510057" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://instagram.com/pedrovanova" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/pedrovanova" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="mailto:pedro@vanocode.com"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Vanocode</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">Desenvolvido por Pedro Vanova</div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Swiper clients
+      const swiperEls = document.querySelectorAll('.init-swiper');
+      swiperEls.forEach(el => {
+        const config = JSON.parse(el.querySelector('.swiper-config')?.textContent || '{}');
+        new Swiper(el, config);
+      });
+
+      // Scroll Top
+      window.addEventListener('scroll', () => {
+        document.getElementById('scroll-top')?.classList.toggle('active', window.scrollY > 300);
+      });
+      document.getElementById('scroll-top')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Preloader
+      window.addEventListener('load', () => {
+        const loaderBar = document.querySelector('.loader-bar');
+        if (loaderBar) {
+          let width = 0;
+          const interval = setInterval(() => {
+            if (width >= 100) {
+              clearInterval(interval);
+              document.getElementById('preloader').classList.add('hidden');
+              setTimeout(() => document.getElementById('preloader').style.display = 'none', 400);
+            } else {
+              width += Math.random() * 15 + 5;
+              if (width > 100) width = 100;
+              loaderBar.style.width = width + '%';
+            }
+          }, 100);
+        } else {
+          document.getElementById('preloader')?.classList.add('hidden');
+        }
+      });
+
+      // Contact Form
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const loading = form.querySelector('.loading');
+          const sentDiv = form.querySelector('.sent-message');
+          loading.classList.remove('d-none');
+          setTimeout(() => {
+            loading.classList.add('d-none');
+            sentDiv.classList.remove('d-none');
+            form.reset();
+            setTimeout(() => sentDiv.classList.add('d-none'), 4000);
+          }, 1000);
+        });
+      }
+    });
+
+    function compartilharContactos() {
+      const contactos = '📞 Pedro Vanova - Vanocode\nWhatsApp: +244 976 510 057\nEmail: pedro@vanocode.com\nInstagram: @pedrovanova\nGitHub: pedrovanova\nCatálogo WhatsApp: https://wa.me/c/244976510057';
+      if (navigator.share) {
+        navigator.share({ title: 'Contacto Pedro Vanova - Vanocode', text: contactos }).catch(() => { });
+      } else {
+        navigator.clipboard.writeText(contactos).then(() => alert('Contactos copiados!')).catch(() => prompt('Copie manualmente:', contactos));
+      }
+    }
+  </script>
 </body>
 
 </html>
