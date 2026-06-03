@@ -1,6 +1,6 @@
 # 🚀 Vanocode - Soluções Digitais Premium
 
-![Vanocode Logo](src/images/icon_logo_512x512.png)
+![Vanocode Logo](assets/img/icon_logo_512x512.png)
 
 **Vanocode** é uma plataforma de soluções digitais especializada em criação de websites, aplicações mobile, marketing digital e automação de sistemas. Este é o site oficial da marca, desenvolvido com HTML5, CSS3 e JavaScript puro.
 
